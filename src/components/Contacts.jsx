@@ -20,7 +20,7 @@ function Contacts(props) {
         const confirmDelete = window.confirm("Are you sure you want to delete this contact?");
         if (confirmDelete) {
           try {
-            await axios.delete(`https://contactkeeperbackend-env.eba-3tmpzsnk.us-east-2.elasticbeanstalk.com/api/contacts/${id}`);
+            await axios.delete(`https://contact-keeper-backend.onrender.com/api/contacts/${id}`);
             props.setTableData((prevData) => prevData.filter(contact => contact.id !== id));
           } catch (err) {
             setError(err.message);

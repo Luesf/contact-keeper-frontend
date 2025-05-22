@@ -14,7 +14,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-        const response = await axios.get("https://contactkeeperbackend-env.eba-3tmpzsnk.us-east-2.elasticbeanstalk.com/api/contacts")
+        const response = await axios.get("https://contact-keeper-backend.onrender.com/api/contacts")
         setTableData(response.data)
     } catch (err) {
         err.message;
@@ -34,7 +34,7 @@ function App() {
   const handleSubmit = async (newContactData) => {
     if (modalMode === "add") {
       try {
-        const response = await axios.post("https://contactkeeperbackend-env.eba-3tmpzsnk.us-east-2.elasticbeanstalk.com/api/contacts", newContactData);
+        const response = await axios.post("https://contact-keeper-backend.onrender.com/api/contacts", newContactData);
         setTableData((prevData) => [...prevData, response.data]);
         console.log("Contact added.", response.data);
       } catch (error) {
@@ -42,7 +42,7 @@ function App() {
       }
     } else {
       try {
-        const response = await axios.put(`https://contactkeeperbackend-env.eba-3tmpzsnk.us-east-2.elasticbeanstalk.com/api/contacts/${contactData.id}`, newContactData);
+        const response = await axios.put(`https://contact-keeper-backend.onrender.com/api/contacts/${contactData.id}`, newContactData);
         setTableData((prevData) => prevData.map((contact) => (contact.id === contactData.id ? response.data : contact)));
         console.log("Contact updated: ", response.data);
       } catch (error) {
