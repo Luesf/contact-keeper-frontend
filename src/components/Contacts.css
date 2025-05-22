@@ -1,0 +1,19 @@
+.contacts-container {
+    background-color: #D6E6F2;
+    padding: 10px;
+    margin: 10px 10px 20px 10px;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.row-buttons button {
+    padding: 5px 15px 5px 15px;
+    margin: 0 3px;
+    font-size: 12px;
+    font-weight: 100;
+    width: 40px;
+}
+
+.row-buttons button span {
+    margin-right: 0;
+}
